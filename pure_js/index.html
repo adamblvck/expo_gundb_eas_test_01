@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<style>html, body, textarea { width: 100%; height: 100%; padding: 0; margin: 0; }</style>
+<textarea id="paste" placeholder="paste here!"></textarea>
+<script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+<script>
+  	gun = Gun(['http://localhost:8765/gun']);
+  
+	gun.user().auth('spelldev_002', "rolling_balloon", (ack)=>{
+		// console.log(gun.user().is, "... done status");
+
+		// check i no error on user authentication
+		if (! ('err' in ack)) {
+
+			console.log("YES GOT IN!")
+
+			gun.get('opt', ack2 => {
+				console.log(ack2);
+			})
+			
+	  	} else {
+			console.log("Got error-", ack.err, ack);
+		}
+
+	});
+
+</script>

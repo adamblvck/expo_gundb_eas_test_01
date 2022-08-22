@@ -1,0 +1,20 @@
+diff --git a/node_modules/react-native-webview-crypto/node_modules/webview-crypto/src/MainWorker.ts b/node_modules/react-native-webview-crypto/node_modules/webview-crypto/src/MainWorker.ts
+index 9d0103e..2876e24 100644
+--- a/node_modules/react-native-webview-crypto/node_modules/webview-crypto/src/MainWorker.ts
++++ b/node_modules/react-native-webview-crypto/node_modules/webview-crypto/src/MainWorker.ts
+@@ -1,4 +1,4 @@
+-import serializeError = require("serialize-error");
++import serializeError  from "serialize-error";
+ 
+ import {parse, stringify, ArrayBufferViewWithPromise} from "./serializeBinary";
+ 
+diff --git a/node_modules/react-native-webview-crypto/node_modules/webview-crypto/src/asyncSerialize.ts b/node_modules/react-native-webview-crypto/node_modules/webview-crypto/src/asyncSerialize.ts
+index f65d38d..149262a 100644
+--- a/node_modules/react-native-webview-crypto/node_modules/webview-crypto/src/asyncSerialize.ts
++++ b/node_modules/react-native-webview-crypto/node_modules/webview-crypto/src/asyncSerialize.ts
+@@ -1,4 +1,4 @@
+-import find = require("lodash/find");
++import find from "lodash/find";
+ 
+ export interface Serializer<T, S> {
+   id: string;
